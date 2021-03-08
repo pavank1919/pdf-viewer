@@ -1,7 +1,13 @@
 <h2>PDF Viewer</h2>
-
+<div>
+  <button (click)="configureAlert($event)">Configure</button>
+  <br />
+  <button (click)="cancelConfigureAlert($event)">Cancel</button>
+</div>
 <div class="pdf-container">
-  <pdf-viewer [src]="src" (pagechanging)="pagechanging($event)"
-              [original-size]="false"
+  <pdf-viewer
+    [src]="src"
+    (pagechanging)="pagechanging($event)"
+    [original-size]="false"
   ></pdf-viewer>
 </div>
